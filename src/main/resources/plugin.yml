@@ -1,0 +1,20 @@
+name: TikTokGame
+version: '${project.version}'
+main: pl.kuezese.tiktokgame.TikTokGame
+api-version: '1.19'
+authors: ['kuezese']
+
+commands:
+  tiktokchat:
+  tiktokjoin:
+  tiktokgift:
+  tiktoklikes:
+  score:
+  addmaxhp:
+  addmob:
+  heal:
+  strength:
+  reset:
+  update:
+  stopcountdown:
+  stopgame:

@@ -1,0 +1,87 @@
+#  _______ _ _ _______    _            _____
+# |__   __(_) |__   __|  | |          / ____|
+# | |   _| | _| | ___ | | ________| |  __  __ _ _ __ ___   ___
+# | |  | | |/ / |/ _ \| |/ /______| | |_ |/ _` | '_ ` _ \ / _ \
+# | |  | |   <| | (_) |   <       | |__| | (_| | | | | | |  __/
+# |_|  |_|_|\_\_|\___/|_|\_\       \_____|\__,_|_| |_| |_|\___|
+#
+# Made by kuezese
+
+# Konfiguracja licencji
+license: WXYZA-BCDEF-GHIJK-LMNOP
+
+# Główna konfiguracja pluginu
+arena-size: 100 # Rozmiar areny gry
+countdown-time: 10 # Czas odliczania do zakończenia gry
+
+# Konfiguracja Spawnowania Mobów
+mob-start-amount: 50 # Liczba mobów początkowo na arenie lub po restarcie
+mob-spawn-radius: 10 # Promień wokół gracza, w którym moby mogą się spawnować
+
+# Konfiguracja Tablicy Wyników
+scoreboard-header: '&c&lTik&f&lTok &7&lGame' # Nagłówek tablicy wyników
+scoreboard-contents:
+  - '&1' # Separator sekcji
+  - '&a☁ &7Wynik: &a{PLAYER-SCORE} &7- &a{VIEWER-SCORE}' # Wyświetlanie wyniku gracza i widza
+  - '&a✽ &7Liczba Mobów: &a{MOBS}' # Wyświetlanie liczby aktualnych mobów na arenie
+  - '&2' # Separator sekcji
+  - '&a✪ &7Ostatni Gifter: &a{LAST-GIFTER}' # Wyświetlanie nazwy ostatniej osoby obdarowującej giftem
+  - '&a✎ &7Ostatni Follower: &a{LAST-FOLLOWER}' # Wyświetlanie nazwy ostatniej obserwującej osoby
+  - '&a🔥 &7Polubień: &a{LIKES}' # Wyświetlanie liczby polubień
+  - '&a✧ &7Widzowie: &a{VIEWERS}' # Wyświetlanie liczby widzów
+  - '&3' # Separator sekcji
+
+# Konfiguracja chatu
+show-chat-from-tiktok: true # Włączenie/wyłączenie wyświetlania wiadomości z chatu na TikToku
+show-joins-from-tiktok: true # Włączenie/wyłączenie wyświetlania dołączeń na TikToku
+show-follows-from-tiktok: true # Włączenie/wyłączenie wyświetlania obserwacji na TikToku
+show-likes-from-tiktok: true # Włączenie/wyłączenie wyświetlania polubień na TikToku
+
+# Konfiguracja giftów
+announce-gifts-on-chat: true # Włączenie/wyłączenie wyświetlania informacji o giftach na chacie
+announce-gifts-on-title: true # Włączenie/wyłączenie wyświetlania informacji o giftach jako title
+
+# Konfiguracja wiadomości
+game-prefix: '&8[&cGAME&8]' # Prefiks dla wiadomości związanych z grą
+chat-prefix: '&8[&cCHAT&8]' # Prefiks dla wiadomości chatu
+chat-format: '{PREFIX} &7{PLAYER} &8» &f{MESSAGE}' # Format wiadomości chatu (zmienna {PLAYER} to nazwa gracza, {MESSAGE} to treść wiadomości)
+game-reset: '{PREFIX} &7Gra została &azresetowana&7.' # Komunikat o zresetowaniu gry
+game-stop: '{PREFIX} &7Gra została &azatrzymana&7.' # Komunikat o zatrzymaniu gry
+player-join: "{PREFIX} &a+ &7{PLAYER}" # Komunikat o dołączeniu gracza
+player-quit: "{PREFIX} &c- &7{PLAYER}" # Komunikat o opuszczeniu gracza
+gift-chat-prefix: '&8[&cGIFT&8]' # Prefiks dla giftów na chacie
+gift-chat-message: '{PREFIX} &a{PLAYER} &7wysłał &a{GIFT} x{AMOUNT}&7.' # Komunikat o otrzymaniu giftu na chacie
+gift-title: '&a&lGIFT' # Tytuł wyświetlany przy giftach
+gift-subtitle: '&a{PLAYER} &7wysłał &a{GIFT} x{AMOUNT}&7.' # Podtytuł wyświetlany przy giftach
+countdown-title: "&a&lODLICZANIE" # Tytuł wyświetlany podczas odliczania
+countdown-subtitle: "&a&l{TIME}" # Podtytuł wyświetlany podczas odliczania
+countdown-cancel-title: "&a&lODLICZANIE ANULOWANE" # Tytuł wyświetlany, gdy odliczanie zostanie anulowane
+countdown-cancel-subtitle: "&a{PLAYER} &7wysłał &a{GIFT} x{AMOUNT}" # Podtytuł wyświetlany, gdy odliczanie zostanie anulowane
+player-win-title: "&a&lZWYCIĘSTWO" # Tytuł wyświetlany przy zwycięstwie gracza
+player-win-subtitle: "&a&lGracz wygrywa!" # Podtytuł wyświetlany przy zwycięstwie gracza
+player-lose-title: "&c&lPORAZKA" # Tytuł wyświetlany przy przegranej gracza
+player-lose-subtitle: "&aWidzowie zwyciężają!" # Podtytuł wyświetlany przy przegranej gracza
+
+# Konfiguracja giftów TikTok
+gifts:
+  'Rose': # Nazwa giftu "Rose"
+    - 'addmob Zombie 1 {GIFTER}' # Komenda dla giftu "Rose" - dodaje 1 moba "Zombie" z nickiem osoby dającej prezent ({GIFTER})
+  'Panda': # Nazwa giftu "Panda"
+    - 'addmob Skeleton 3 {GIFTER}' # Komenda dla giftu "Panda" - dodaje 3 moby "Skeleton" z nickiem osoby dającej prezent ({GIFTER})
+  'Perfume': # Nazwa giftu "Perfume"
+    - 'addmob Zombie 21 {GIFTER}' # Komenda dla giftu "Perfume" - dodaje 21 mobów "Zombie" z nickiem osoby dającej prezent ({GIFTER})
+  'Doughnut': # Nazwa giftu "Doughnut"
+    - 'addmob Skeleton 20 {GIFTER}' # Komenda dla giftu "Doughnut" - dodaje 20 mobów "Skeleton" z nickiem osoby dającej prezent ({GIFTER})
+  'Cap': # Nazwa giftu "Cap"
+    - 'addmob Zombie 50 {GIFTER}' # Komenda dla giftu "Cap" - dodaje 50 mobów "Zombie" z nickiem osoby dającej prezent ({GIFTER})
+    - 'addmob Skeleton 50 {GIFTER}' # Dodatkowa komenda dla giftu "Cap" - dodaje 50 mobów "Skeleton" z nickiem osoby dającej prezent ({GIFTER})
+  'TikTok': # Nazwa giftu "TikTok"
+    - 'strength 5 1' # Komenda dla giftu "TikTok" - daje efekt "strength" o poziomie 5 na 1 sekundę
+  'Lollipop': # Nazwa giftu "Lollipop"
+    - 'heal' # Komenda dla giftu "Lollipop" - leczy gracza
+    - 'give @a golden_apple 2' # Dodatkowa komenda dla giftu "Lollipop" - daje 2 złote jabłka
+  'Confetti': # Nazwa giftu "Confetti"
+    - 'repairall' # Komenda dla giftu "Confetti" - naprawia wszystkie przedmioty w ekwipunku graczy
+    - 'give @a enchanted_golden_apple 2' # Dodatkowa komenda dla giftu "Confetti" - daje 2 zaklęte złote jabłka
+  'Love You': # Nazwa giftu "Love You"
+    - 'addmaxhp 10' # Komenda dla giftu "Love You" - dodaje 10 maksymalnych serc
