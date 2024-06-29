@@ -2,7 +2,6 @@ package pl.kuezese.tiktokgame;
 
 import lombok.Getter;
 import org.bukkit.Bukkit;
-import org.bukkit.ChatColor;
 import org.bukkit.GameRule;
 import org.bukkit.World;
 import org.bukkit.configuration.file.FileConfiguration;
@@ -11,14 +10,16 @@ import org.bukkit.plugin.java.JavaPlugin;
 import pl.kuezese.tiktokgame.command.*;
 import pl.kuezese.tiktokgame.config.Configuration;
 import pl.kuezese.tiktokgame.game.GameController;
-import pl.kuezese.tiktokgame.license.TikAuth;
 import pl.kuezese.tiktokgame.listener.PlayerDeathListener;
 import pl.kuezese.tiktokgame.listener.PlayerJoinListener;
 import pl.kuezese.tiktokgame.task.CountdownTask;
 import pl.kuezese.tiktokgame.task.GameTask;
 import pl.kuezese.tiktokgame.task.ScoreBoardTask;
 
-import java.io.*;
+import java.io.File;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
 import java.nio.file.Files;
 import java.util.Properties;
 import java.util.logging.Level;
@@ -165,12 +166,12 @@ public final @Getter class TikTokGame extends JavaPlugin {
         this.configuration = new Configuration(this);
 
         // Check license
-        if (!TikAuth.checkLicense(this, this.configuration.getLicense())) {
-            this.getServer().shutdown();
-            return;
-        } else {
-            this.getLogger().info(ChatColor.GREEN + "Successfully authorized license.");
-        }
+        // if (!TikAuth.checkLicense(this, this.configuration.getLicense())) {
+        //     this.getServer().shutdown();
+        //     return;
+        // } else {
+        //     this.getLogger().info(ChatColor.GREEN + "Successfully authorized license.");
+        // }
 
         // Stop game if running
         this.gameController.stop();

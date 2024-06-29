@@ -27,7 +27,7 @@ public class TikAuth {
 
             // Log the message if failed
             if (!success) {
-                plugin.getLogger().warning(ChatColor.RED + "FFailed to authorize license! Response: " + message);
+                plugin.getLogger().warning(ChatColor.RED + "Failed to authorize license! Response: " + message);
             }
 
             return success;
